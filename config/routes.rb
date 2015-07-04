@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   end
 
   resources :matches, :only => [:index, :show, :update, :new, :create]
-  # resources :venues, :only => []
+  resources :venues, :only => [:index]
 
   # resources :websites, :only => [:index]
   # resources :imports, :only => [:index]
