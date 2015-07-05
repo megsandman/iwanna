@@ -9,3 +9,28 @@
 .contact-link {
   color: black;
 }
+
+.background-image {
+  /*background: url(http://i.imgur.com/bLswt65.jpg) no-repeat center center;*/
+  background: url(http://i.imgur.com/mDl3WVV.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.new-background {
+  background-color: white;
+  width: 400px;
+  height: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 100px;
+  display: block;
+  padding-left: 20px;
+}
+
+.contact-link:hover {
+  color: rgb(93,204, 175);
+}
+
+.contact-link:visited {
+  color: rgb(93,204, 175);
+}
