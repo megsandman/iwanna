@@ -25,15 +25,12 @@
       <thead>
         <tr class="row">
           <th class="col-lrg-1 import-table-headers">Match ID</th>
-          <th class="col-lrg-1 import-table-headers">Neighborhood</th>
-          <th class="col-lrg-1 import-table-headers">Genre</th>
+          <th class="col-lrg-2 import-table-headers">Neighborhood</th>
+          <th class="col-lrg-1 import-table-headers">Genre ID</th>
+          <th class="col-lrg-2 import-table-headers">Genre</th>
+          <th class="col-lrg-2 import-table-headers">Venue ID</th>
           <th class="col-lrg-2 import-table-headers">Name</th>
-          <th class="col-lrg-2 import-table-headers">Address</th>
-          <th class="col-lrg-1 import-table-headers">City</th>
-          <th class="col-lrg-1 import-table-headers">State</th>
-          <th class="col-lrg-1 import-table-headers">Zip</th>
-          <th class="col-lrg-1 import-table-headers">Yelp Link</th>
-          <th class="col-lrg-1 import-table-headers">Update</th>
+          <th class="col-lrg-2 import-table-headers">Update</th>
           <tr>
       </thead>
       <tbody class="import-details">
@@ -41,19 +38,12 @@
           <tr id="<%= match.id %>" class="row">
           <%= form_for match do |f| %>
             <td class="col-lrg-1 match-link"><%= match.id %></td>
-            <td class="col-lrg-1 match-link"><%= match.neighborhood_id %></td>
+            <td class="col-lrg-2 match-link"><%= get_neighborhood(match.neighborhood_id).name %></td>
             <td class="col-lrg-1 match-link"><%= match.genre_id %></td>
-            <td class="col-lrg-2"><input class="import-text-box" value=<%="#{get_venue(match.venue_id).name}" %> /></td>
-            <td class="col-lrg-2"><input class="import-text-box" value=<%="#{get_venue(match.venue_id).address}" %> /></td>
-            <td class="col-lrg-1"><input class="import-text-box" value=<%="#{get_venue(match.venue_id).city}" %> /></td>
-            <td class="col-lrg-1"><input class="import-text-box" value=<%="#{get_venue(match.venue_id).state}" %> /></td>
-            <td class="col-lrg-1"><input class="import-text-box" value=<%="#{get_venue(match.venue_id).zip_code}" %> /></td>
-            <td class="col-lrg-1 match-link">
-              <a target="blank" href=<%= "#{get_venue(match.venue_id).link}"%>>Link</a>
-            </td>
-
-
-            <td class="col-lrg-1 import-buttons"><%= f.submit 'Update', :class => 'approve-delete-buttons update-button', :id => match.id %></td>
+            <td class="col-lrg-2 match-link"><%= get_genre(match.genre_id).name %></td>
+            <td class="col-lrg-1"><%= f.text_field :venue_id, :class => 'import-text-box' %></td>
+            <td class="col-lrg-2 match-link"><%= get_venue(match.venue_id).name %></td>
+            <td class="col-lrg-2 import-buttons"><%= f.submit 'Update', :class => 'approve-delete-buttons update-button', :id => match.id %></td>
           <% end %>
 
         </tr>
