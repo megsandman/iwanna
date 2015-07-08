@@ -1,0 +1,82 @@
+/*###########################*/
+/*##### IMPORTS#INDEX  #####*/
+/*###########################*/
+
+.import-header {
+  font-size: 1.8em;
+  font-family: 'Roboto', sans-serif;
+  color: #565353;
+  margin-left: 2%;
+  text-align: center;
+}
+
+.import-table-headers {
+  font-size: 1em;
+  font-family: 'Roboto', sans-serif;
+  color: #565353;
+  text-align: center;
+}
+
+.import-details {
+  font-size: 0.8em;
+}
+
+.col-lrg-2 {
+    width: 16.66666667%;
+    position: relative;
+    min-height: 1px;
+    padding: 0;
+    border-bottom: 1px solid #565353;
+  }
+
+.col-lrg-1 {
+  width: 10%;
+  position: relative;
+  min-height: 1px;
+  padding: 0;
+  border-bottom: 1px solid #565353;
+}
+
+.import-text-box {
+  margin-left: 2%;
+  width: 96%;
+}
+
+.match-link {
+  text-align: center;
+}
+
+.match-link a {
+  color: #FFDE00;
+}
+
+.import-buttons {
+  text-align: center;
+}
+
+.approve-delete-buttons {
+  background-color: #FFDE00;
+  color: white;
+  font-size: 1.2em;
+  width: 65px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 5px 8px;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.approve-delete-buttons:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.all-matches {
+  margin-top: 30px;
+}
+

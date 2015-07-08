@@ -1,14 +1,11 @@
 class MatchesController < ApplicationController
 
   def index
-
     @matches = Match.all.order(:id)
     render :json => @matches, status: 200
-
   end
 
   def show
-
     if params["genre"] && params["neighborhood"]
       requested_genre_id = params["genre"]
       requested_neighborhood_id = params["neighborhood"]
@@ -36,7 +33,34 @@ class MatchesController < ApplicationController
     else
       p "NO GENRE OR NEIGHBORHOOD"
     end
-
   end
+
+  def create
+    @match = Match.new(match_params)
+    if @match.save
+      redirect_to '/imports'
+    else
+      render 'new'
+    end
+  end
+
+  def update
+    @match = Match.find(params[:id])
+    if @match.update(match_params)
+      if @match.save
+        redirect_to '/imports'
+      else
+        p "DIDN'T SAVE"
+      end
+    else
+      p "DIDN'T UPDATE"
+    end
+  end
+
+  private
+
+    def match_params
+      params.require(:match).permit(:venue_id, :neighborhood_id, :genre_id)
+    end
 
 end

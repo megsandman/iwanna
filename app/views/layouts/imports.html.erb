@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+  <title>i wanna</title>
+  <%= csrf_meta_tags %>
+  <link href="../../../assets/imports.css" rel="stylesheet" type="text/css">
+  <link href="../../../assets/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <script src="../../../assets/jquery-1.11.0.min.js"></script>
+  <script src="../../../assets/imports.js"></script>
+
+
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<div>
+  <h1 class="import-header">CREATE NEW MATCH</h1>
+  <%= form_for :match, url: matches_path do |f| %>
+    <%= f.text_field :neighborhood_id, :placeholder => "Neighborhood ID" %>
+    <%= f.text_field :genre_id, :placeholder => "Genre ID"%>
+    <%= f.text_field :venue_id, :placeholder => "Venue ID" %>
+    <%= f.submit 'Create' %>
+  <% end %>
+</div>
+<div>
+  <h1 class="import-header">CREATE NEW VENUE</h1>
+  <%= form_for :venue, url: venues_path do |f| %>
+    <%= f.text_field :name, :placeholder => "name" %>
+    <%= f.text_field :link, :placeholder => "link"%>
+    <%= f.text_field :address, :placeholder => "address" %>
+    <%= f.text_field :city, :placeholder => "city" %>
+    <%= f.text_field :state, :placeholder => "state" %>
+    <%= f.text_field :zip_code, :placeholder => "zip_code" %>
+    <%= f.submit 'Create' %>
+  <% end %>
+</div>
+<div class="all-matches">
+  <h1 class="import-header">ALL MATCHES</h1>
+  <div>
+    <table>
+      <thead>
+        <tr class="row">
+          <th class="col-lrg-1 import-table-headers">Match ID</th>
+          <th class="col-lrg-2 import-table-headers">Neighborhood ID</th>
+          <th class="col-lrg-2 import-table-headers">Neighborhood</th>
+          <th class="col-lrg-1 import-table-headers">Genre ID</th>
+          <th class="col-lrg-2 import-table-headers">Genre</th>
+          <th class="col-lrg-2 import-table-headers">Venue ID</th>
+          <th class="col-lrg-2 import-table-headers">Name</th>
+          <th class="col-lrg-2 import-table-headers">Update</th>
+          <tr>
+      </thead>
+      <tbody class="import-details">
+        <% @matches.each do |match|%>
+          <tr id="<%= match.id %>" class="row">
+          <%= form_for match do |f| %>
+            <td class="col-lrg-1 match-link"><%= match.id %></td>
+            <td class="col-lrg-1 match-link"><%= match.neighborhood_id %></td>
+            <td class="col-lrg-2 match-link"><%= get_neighborhood(match.neighborhood_id).name %></td>
+            <td class="col-lrg-1 match-link"><%= match.genre_id %></td>
+            <td class="col-lrg-2 match-link"><%= get_genre(match.genre_id).name %></td>
+            <td class="col-lrg-1"><%= f.text_field :venue_id, :class => 'import-text-box' %></td>
+            <td class="col-lrg-2 match-link"><%= get_venue(match.venue_id).name %></td>
+            <td class="col-lrg-2 import-buttons"><%= f.submit 'Update', :class => 'approve-delete-buttons update-button', :id => match.id %></td>
+          <% end %>
+
+        </tr>
+        <% end %>
+      </tbody>
+    <table>
+  </div>
+</div>
+</body>
+</html>
