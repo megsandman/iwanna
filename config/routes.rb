@@ -12,8 +12,7 @@ Rails.application.routes.draw do
   resources :matches, :only => [:index, :show, :update, :new, :create]
   resources :venues, :only => [:index]
 
+  resources :imports, :only => [:index]
   root to: 'website#index'
-  # resources :websites, :only => [:index]
-  # resources :imports, :only => [:index]
 
 end
