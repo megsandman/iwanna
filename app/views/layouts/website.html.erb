@@ -1,54 +1,104 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <title>i wanna</title>
 
-  <!-- Bootstrap Core CSS -->
-  <link href="../../../assets/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>i wanna</title>
+    <meta name="description" content="Startups template">
+    <meta name="keywords" content="Startups template">
+    <link rel="shortcut icon" href="../../../assets/app_icon.png">
+    <link rel="apple-touch-icon" href="../../../assets/app_icon.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../../assets/app_icon.png">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../../assets/bootstrap.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../../../assets/font-awesome.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../../../assets/font-lineicons.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../../../assets/animate.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../../../assets/toastr.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../../../assets/style.css" type="text/css" media="all" />
 
-  <!-- Custom CSS -->
-  <link href="../../../assets/landing-page.css" rel="stylesheet">
-  <link href="../../../assets/app.css" rel="stylesheet">
-  <script src="../../../assets/jquery-1.11.0.min.js"></script>
-  <script src="../../../assets/app.js"></script>
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+</head>
+
+<body id="landing-page">
+
+    <!-- Preloader -->
+    <div id="mask">
+        <div id="loader"></div>
+    </div>
+
+    <header>
+        <nav class="navigation navigation-header">
+            <div class="container">
+                <div class="navigation-brand">
+                    <button class="navigation-toggle visible-xs" type="button" data-toggle="dropdown" data-target=".navigation-navbar">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navigation-navbar">
+                    <ul class="navigation-bar navigation-bar-left">
+                        <li class="active"><a href="#hero">Home</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <ul class="navigation-bar navigation-bar-right">
+                        <li class="featured"><a href="https://itunes.apple.com/us/app/i-wanna-san-francisco-food/id1009132577?mt=8" target="blank">Download</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="hero" class="static-header light clearfix">
+        <div class="text-heading">
+            <h1 class="animated hiding" data-animation="bounceInDown" data-delay="0"><span class="highlight">i wanna</span></h1>
+            <p class="animated hiding" data-animation="fadeInDown" data-delay="500">Discover the best restaurants and bars in the San Francisco Bay Area without being overwhelmed by hundreds of options.</p>
+            <a href="https://itunes.apple.com/us/app/i-wanna-san-francisco-food/id1009132577?mt=8" target="blank"><img src="../../../assets/Download_on_the_App_Store_Badge_US-UK_135x40.svg" class="app-download-button animated hiding" data-animation="bounceIn" data-delay="900"/></a>
+            <ul class="list-inline">
+            </ul>
+        </div>
+    </div>
+
+    <hr class="no-margin" />
+
+    <footer id="contact" class="footer light">
+        <div class="container">
+            <div class="footer-content row">
+                <div class="col-sm-12">
+                    <div class="footer-title footer-center">Contact</div>
+                        <p class="thin footer-center">Say hello.</p>
+                        <p class="thin footer-center-contact"><a href="mailto:contact@shopdabble.com">contact@shopdabble.com</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="back-to-top"><i class="fa fa-angle-up fa-3x"></i></div>
+
+    <script type="text/javascript" src="../../../assets/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../../../assets/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../assets/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="../../../assets/jquery.nav.js"></script>
+    <script type="text/javascript" src="../../../assets/jquery.appear.js"></script>
+    <script type="text/javascript" src="../../../assets/jquery.plugin.js"></script>
+    <script type="text/javascript" src="../../../assets/jquery.countdown.js"></script>
+    <script type="text/javascript" src="../../../assets/waypoints.min.js"></script>
+    <script type="text/javascript" src="../../../assets/waypoints-sticky.min.js"></script>
+    <script type="text/javascript" src="../../../assets/jquery.validate.js"></script>
+    <script type="text/javascript" src="../../../assets/toastr.min.js"></script>
+    <script type="text/javascript" src="../../../assets/headhesive.min.js"></script>
+  <script type="text/javascript" src="../../../assets/mailchimp/mailing-list.js"></script>
+    <script type="text/javascript" src="../../../assets/scripts.js"></script>
+    <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-63385529-1', 'auto');
+    ga('create', 'UA-63385529-1', 'auto');
   ga('send', 'pageview');
 
 </script>
-
-  <!-- Custom Fonts -->
-  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-</head>
-<body class="background-image">
-
-  <div class="intro-header">
-      <div class="container">
-          <div class="row">
-                <div id="hero" class="static-header light clearfix">
-                  <div class="text-heading">
-                      <h1 class="animated hiding" data-animation="bounceInDown" data-delay="0"><span class="highlight">i wanna</span></h1>
-                      <p class="animated hiding" data-animation="fadeInDown" data-delay="500">Discover the best restaurants and bars in the San Francisco Bay Area without being overwhelmed by hundreds of options.</p>
-                      <p><a class="contact-link" href="mailto:contact@yeahiwanna.com">Get in touch.</a></p>
-                      <ul class="list-inline">
-                      </ul>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <!-- /.container -->
-  </div>
-  <!-- /.intro-header -->
-
 </body>
-
-    <script type="text/javascript" src="../../../assets/bootstrap.min.js"></script>
-
 </html>
-
-
